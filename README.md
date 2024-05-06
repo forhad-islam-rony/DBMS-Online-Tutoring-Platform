@@ -71,12 +71,6 @@ Normalization techniques were applied to ensure that the database is structured 
 
 ---
 
-## Entity-Relationship Diagram (ERD)
-
-[Insert ERD here]
-
----
-
 
   ## Targeted Customers/Users
 The Online Tutoring Platform is designed to fulfill various stakeholders involved in the online education ecosystem, including:
