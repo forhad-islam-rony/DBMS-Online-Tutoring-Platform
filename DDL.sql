@@ -3,18 +3,18 @@
 -- users Table​
 Create table users (​
     userID number,​
-    fullName varchar2(255),​
-    email varchar2(255) unique,​
-    password varchar2(255),​
-    role varchar2(50) check (role in ('student', 'teacher')), ​
+    fullName varchar2(25),​
+    email varchar2(25) unique,​
+    password varchar2(25),​
+    role varchar2(20) check (role in ('student', 'teacher')), ​
     primary key(userID)​
 );​
 
 -- courses Table​
 Create table courses (​
     courseID number,​
-    courseName varchar2(255),​
-    description varchar2(1000),​
+    courseName varchar2(25),​
+    description varchar2(500),​
     primary key(courseID)​
 );
 
@@ -48,7 +48,7 @@ create table reviews (​
     reviewID number,​
     sessionID number,​
     rating number,​
-    comments varchar2(255),​
+    comments varchar2(25),​
     Primary key(reviewID),​
     Foreign key (sessionID) references sessions(sessionID)​
 );​
@@ -59,7 +59,7 @@ Create table payments (​
     sessionID number,​
     amount number,​
     paymentDateTime timestamp,​
-    paymentStatus varchar2(255) check (paymentStatus in ('Completed', 'Pending', 'Failed')), ​
+    paymentStatus varchar2(25) check (paymentStatus in ('Completed', 'Pending', 'Failed')), ​
     Primary key (paymentID),​
     Foreing key (sessionID) references sessions(sessionID)​
 );
