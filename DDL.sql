@@ -36,7 +36,7 @@ Create table sessions (​
     courseID number,​
     sessionDateTime timestamp,​
     duration number,​
-    status varchar2(255) check (status in ('Scheduled', 'Completed', 'Cancelled')),​
+    status varchar2(25) check (status in ('Scheduled', 'Completed', 'Cancelled')),​
     Primary key (sessionID),​
     Foreign key (tutorID) references users(userID), ​
     Foreign key (studentID) references users(userID), ​
@@ -48,7 +48,7 @@ create table reviews (​
     reviewID number,​
     sessionID number,​
     rating number,​
-    comments varchar2(25),​
+    comments varchar2(500),​
     Primary key(reviewID),​
     Foreign key (sessionID) references sessions(sessionID)​
 );​
